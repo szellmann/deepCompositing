@@ -17,8 +17,8 @@
 #pragma once
 
 // #include "owl/common/math/vec.h"
-#include <cuda_runtime.h>
-#include <cuda_fp16.h>
+#include <hip/hip_runtime.h>
+#include <hip/hip_fp16.h>
 #include <mpi.h>
 #include <stdint.h>
 #include <stdlib.h>

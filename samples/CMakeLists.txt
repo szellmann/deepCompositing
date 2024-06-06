@@ -4,7 +4,7 @@ if (EXISTS ../../owl)
   add_subdirectory(../../owl build_owl EXCLUDE_FROM_ALL)
   add_executable(testDeepViewer
     testDeepViewer.cpp
-    testRenderer.cu
+    testRenderer.cpp
     )
   target_link_libraries(testDeepViewer
     deepCompositing
@@ -26,7 +26,7 @@ endif()
 
 add_executable(testDeepOffline
   testDeepOffline.cpp
-  testRenderer.cu
+  testRenderer.cpp
   )
 target_link_libraries(testDeepOffline
   deepCompositing

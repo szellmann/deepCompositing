@@ -18,14 +18,10 @@ find_package(anari 0.8.0 REQUIRED)
 
 ## PTC device target ##
 
-project(anari_library_ptc LANGUAGES C CXX CUDA)
+project(anari_library_ptc LANGUAGES C CXX HIP)
 
-project_add_library(MODULE PTCDevice.cpp PTCLibrary.cpp FrameWrapper.cu)
+project_add_library(MODULE PTCDevice.cpp PTCLibrary.cpp FrameWrapper.hip)
 project_link_libraries(anari::helium deepCompositing)
-
-set_source_files_properties(FrameWrapper.cu
-  PROPERTIES COMPILE_FLAGS "--expt-relaxed-constexpr"
-)
 
 include(GenerateExportHeader)
 generate_export_header(${PROJECT_NAME} EXPORT_MACRO_NAME "PTC_EXPORT")
